@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,12 +27,18 @@ public class Weapon : MonoBehaviour
 
     public void Attack()
     {
+        StartCoroutine(AttackRoutine());
+    }
+
+    IEnumerator AttackRoutine()
+    {
         if (Time.time > availableTime)
         {
             m_Collider.enabled = true;
             renderer.enabled = true;
             availableTime = Time.time + cooldown * (1 - attackspeed);
-            yield WaitForSeconds(1);
+            yield return new WaitForSeconds(1);
+            Console.WriteLine("SCHWING");
             m_Collider.enabled = false;
             renderer.enabled = false;
         }
