@@ -38,7 +38,6 @@ public class Weapon : MonoBehaviour
             renderer.enabled = true;
             availableTime = Time.time + cooldown * (1 - attackspeed);
             yield return new WaitForSeconds(1);
-            Console.WriteLine("SCHWING");
             m_Collider.enabled = false;
             renderer.enabled = false;
         }

@@ -54,6 +54,19 @@ public class CharaController : Character
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            skill1.Activate(this, angle);
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            skill2.Activate(this, angle);
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            skill3.Activate(this, angle);
+        }
+
         //Sanity Effects
         sanityBar.transform.localScale = new Vector3((float)sanity / maxSanity, 0.1f, 1);
         ParticleSystem ps = sanitySmoke.GetComponent<ParticleSystem>();

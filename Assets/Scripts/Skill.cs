@@ -19,16 +19,16 @@ public class Skill : MonoBehaviour
         
     }
 
-    public void Activate(Character character)
+    public void Activate(Character character, float angle)
     {
         if (Time.time > availableTime)
         {
             availableTime = Time.time + cooldown;
-            this.Action(character);
+            this.Action(character, angle);
         }
     }
     
-    public virtual void Action(Character character)
+    public virtual void Action(Character character, float angle)
     {
 
     }

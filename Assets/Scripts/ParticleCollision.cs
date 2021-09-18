@@ -8,7 +8,6 @@ public class ParticleCollision : MonoBehaviour
 {
     private ParticleSystem part;
     public List<ParticleCollisionEvent> collisionEvents;
-    public CinemachineVirtualCamera cam;
     public GameObject explosionPrefab;
 
     void Start()
@@ -25,8 +24,6 @@ public class ParticleCollision : MonoBehaviour
 
         ParticleSystem p = explosion.GetComponent<ParticleSystem>();
         var pmain = p.main;
-
-        cam.GetComponent<CinemachineImpulseSource>().GenerateImpulse();
 
         if (other.GetComponent<Rigidbody2D>() != null)
             other.GetComponent<Rigidbody2D>().AddForceAtPosition(collisionEvents[0].intersection * 10 - transform.position, collisionEvents[0].intersection + Vector3.up);

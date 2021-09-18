@@ -29,8 +29,20 @@ public class Character : MonoBehaviour
         if (skill1 != null)
         {
             skill1 = Instantiate(skill1);
-            skill1 = Instantiate(skill1);
             skill1.transform.SetParent(this.transform);
+            skill1.transform.localPosition = Vector3.zero;
+        }
+        if (skill2 != null)
+        {
+            skill2 = Instantiate(skill2);
+            skill2.transform.SetParent(this.transform);
+            skill2.transform.localPosition = Vector3.zero;
+        }
+        if (skill3 != null)
+        {
+            skill3 = Instantiate(skill3);
+            skill3.transform.SetParent(this.transform);
+            skill3.transform.localPosition = Vector3.zero;
         }
     }
 

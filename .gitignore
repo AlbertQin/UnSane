@@ -1,7 +1,10 @@
-Library/
+Library/*
 Plugins/
 Assets_DevilsWorkShop/
 Temp/
 Library/
 Logs/
+WebGL Builds/
 Assets/TextMesh Pro/
+Library/PackageManager/ProjectCache.md5
+Library/ArtifactDB

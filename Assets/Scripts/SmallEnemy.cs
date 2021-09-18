@@ -20,17 +20,22 @@ public class SmallEnemy : Character
     protected override void Update()
     {
         base.Update();
-        if(Vector3.Distance(transform.position, player.transform.position) > 0.5)
+
+        //Get Facing Direction
+        Vector2 lookDir = player.transform.position - transform.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+
+        //Move Towards Player
+        if (Vector3.Distance(transform.position, player.transform.position) > 0.5)
         {
           transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         }
         
+        //Attack if Within Range
         if (Vector3.Distance(transform.position, player.transform.position) < 1)
         {
             if (Time.time > availableTime)
             {
-                Vector2 lookDir = player.transform.position - transform.position;
-                float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
                 Attack(this.transform.position + attackRange * new Vector3(DegreeToVector2(angle).x, DegreeToVector2(angle).y, 0));
                 availableTime = Time.time + attackSpeed;
                 weapon.transform.rotation = Quaternion.Euler(0, 0, angle);
