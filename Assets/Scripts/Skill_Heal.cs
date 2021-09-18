@@ -21,6 +21,5 @@ public class Skill_Heal : Skill
     public override void Action(Character character)
     {
         character.health = Math.Min(character.health + 50, character.maxhealth);
-        Console.WriteLine(character.health);
     }
 }

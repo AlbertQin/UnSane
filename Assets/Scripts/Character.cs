@@ -29,6 +29,7 @@ public class Character : MonoBehaviour
         if (skill1 != null)
         {
             skill1 = Instantiate(skill1);
+            skill1 = Instantiate(skill1);
             skill1.transform.SetParent(this.transform);
         }
     }
