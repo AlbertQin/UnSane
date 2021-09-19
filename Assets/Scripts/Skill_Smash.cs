@@ -7,7 +7,7 @@ public class Skill_Smash : Skill
     // Start is called before the first frame update
     void Start()
     {
-        this.cooldown = 1;
+
     }
 
     // Update is called once per frame

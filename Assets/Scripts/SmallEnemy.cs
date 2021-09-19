@@ -26,7 +26,7 @@ public class SmallEnemy : Character
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
 
         //Move Towards Player
-        if (Vector3.Distance(transform.position, player.transform.position) > 0.5)
+        if (Vector3.Distance(transform.position, player.transform.position) > 1)
         {
           transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         }

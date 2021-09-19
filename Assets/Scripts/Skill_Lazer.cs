@@ -8,7 +8,6 @@ public class Skill_Lazer : Skill
     // Start is called before the first frame update
     void Start()
     {
-        this.cooldown = 5;
         collisionEvents = new List<ParticleCollisionEvent>();
     }
 
