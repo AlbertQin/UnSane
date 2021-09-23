@@ -4890,3 +4890,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle: {fileID: 2489416515301977206}
   cooldown: 5
+  skillSprite: {fileID: 21300000, guid: 53085f18b2c38eb4e8539c23811c3347, type: 3}
